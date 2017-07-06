@@ -28,7 +28,7 @@ def test_net(prefix, epoch, batch_size, ctx,
     detectors[0] = PNet
 
     # load rnet model
-    args, auxs = load_param(prefix[1], epoch[0], convert=True, ctx=ctx)
+    args, auxs = load_param(prefix[1], epoch[1], convert=True, ctx=ctx)
     RNet = Detector(R_Net("test"), 24, batch_size[1], ctx, args, auxs)
     detectors[1] = RNet
 
